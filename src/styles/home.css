@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&display=swap');
+
+
+.home {
+    color: aliceblue;
+    font-size: 100px;
+    text-shadow: 2px 2px 5px rgb(138, 252, 237),  4px 4px 10px rgb(0, 128, 0);
+    font-family: 'Diplomata', cursive; 
+    margin-left: auto;
+}
+body {
+    background-image: url("https://wallpapercave.com/wp/KQguKV7.jpg");
+
+}
+
+.pos{
+    margin-top: 5%;
+
+}
