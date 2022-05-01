@@ -7,6 +7,10 @@ margin-left: 33%;
 margin-bottom: 2%;
 }
 
+.holly {
+    color: rgb(29, 77, 165);
+}
+
 .cardsMain {
 width: 100vw;
 height: 200vh;
@@ -28,4 +32,19 @@ background: rgba(0, 0, 0, .8);
 .bb8{
     width:286px;
      height: 285px;
+}
+
+.saveIcon {
+    margin-left: 30%;
+    font-size: 40px;
+    color: rgb(241, 194, 194)
+}
+.saveIcon:hover {
+    cursor: pointer;
+    color:red;
+
+}
+
+.save{
+    color: red;
 }

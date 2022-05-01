@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/react.css";
+import propTypes from "prop-types";
+// import {favsList} from "../views/cards.js";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
 	return (
 		<>
 	
@@ -12,14 +14,25 @@ export const Navbar = () => {
 				<span className="navbar-brand mx-3 h1">Home</span>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Demo Page </button>
+			<Link to="/characters">
+<button className="btn btn-danger mx-4 "> Characters Page  </button>
 				</Link>
-				<Link to="/cards">
-<button className="btn btn-danger mx-4 "> Cards Page  </button>
+				<Link to="/planets">
+					<button className="btn btn-primary">Planets Page </button>
 				</Link>
+				<Link to="/ships">
+<button className="btn btn-danger mx-4 "> Ships Page  </button>
+				</Link>
+				<button type="button" className="btn btn-info dropdown">
+  Favorites <span className="badge bg-warning " data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">4</span> <a className="dropdown-toggle" data-bs-toggle="dropdown"
+						href="#"
+						role="button"
+						aria-expanded="false"></a>
+						<ul className="dropdown-menu">{props.listings}</ul>
+</button>
+
 			</div>
-			
+		
 				
 				
 		</nav>
