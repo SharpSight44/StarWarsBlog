@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import "../../styles/react.css";
 import propTypes from "prop-types";
 // import {favsList} from "../views/cards.js";
+import { FavoritesContext } from "../component/favorites";
 
 export const Navbar = (props) => {
+	const {favorites, setfavorites} = useContext(FavoritesContext);
+
+	
+	
 	return (
 		<>
 	
@@ -28,7 +33,7 @@ export const Navbar = (props) => {
 						href="#"
 						role="button"
 						aria-expanded="false"></a>
-						<ul className="dropdown-menu">{props.listings}</ul>
+						<ul className="dropdown-menu">{favorites.map((x,i)=> <li key={i}>{x}</li>)}</ul>
 </button>
 
 			</div>

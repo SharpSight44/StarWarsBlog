@@ -2,11 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import "../../styles/cards.css";
 import {BiBookmarkHeart} from 'react-icons/bi';
 import { getAllPlanets } from "../component/api";
+import { FavoritesContext } from "../component/favorites";
 
 export const AllPlanets = ()=>{
     const [apiPlanets, setapiPlanets] = useState([]);
     const [fav, setfav] = useState(false);
-    const [favlist, setfavlist] = useState([]);
+    
 
     useEffect(() => {
         const fn = async () => {
@@ -17,13 +18,13 @@ export const AllPlanets = ()=>{
       }, []);
 
 
-      const favsList = (item)=>{
-        const newlist = [...favlist + item ];
+    //   const favsList = (item)=>{
+    //     const newlist = [...favlist + item ];
     
-        setfavlist(newlist);
+    //     setfavlist(newlist);
     
-        return console.log(list.map((x,i)=> <li key={i}>{x}</li>));
-    };
+    //     return console.log(list.map((x,i)=> <li key={i}>{x}</li>));
+    // };
     
     
     

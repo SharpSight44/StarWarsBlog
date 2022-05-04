@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+
+
 import injectContext from "./store/appContext";
 import { AllCharacters } from "./views/allCharacters";
 
@@ -12,6 +12,8 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { AllPlanets } from "./views/Planets";
 import { AllShips } from "./views/ships";
+import { LocalShip } from "./views/shipsId";
+import { FavoritesContext } from "./component/favorites";
 
 //create your first component
 const Layout = () => {
@@ -19,11 +21,18 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
 
+	const [favorites, setfavorites] = useState(["start"]); 
+
+	
+
+
 	return (
 		<div>
+			
 			<BrowserRouter basename={basename}>
+			<FavoritesContext.Provider value={{favorites, setfavorites}}>
 				<ScrollToTop>
-					<Navbar listings={"Leo is Great" } />
+					<Navbar  />
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -34,8 +43,8 @@ const Layout = () => {
 						<Route exact path="/ships">
 							<AllShips/>
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/ships/:id">
+							<LocalShip />
 						</Route>
 						<Route exact path="/characters">
 <AllCharacters/>
@@ -46,7 +55,9 @@ const Layout = () => {
 					</Switch>
 					<Footer />
 				</ScrollToTop>
+				</FavoritesContext.Provider>
 			</BrowserRouter>
+			
 		</div>
 	);
 };
