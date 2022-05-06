@@ -45,7 +45,7 @@ export const AllPlanets = ()=>{
   <div className="card-body">
     <h5 className="card-title"><b>{x.name}</b></h5>
     <p className="card-text">A reliable and versatile astromech droid, R2-D2 has served Padmé Amidala, Anakin Skywalker, and Luke Skywalker...</p>
-    <a href="#" className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
+    <a href={"/planets/" + (i + 1) } className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
   </div>
 </div>
 </div> )}

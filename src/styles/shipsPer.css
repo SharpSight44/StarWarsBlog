@@ -1,0 +1,21 @@
+.white {
+    color: whitesmoke;
+    
+}
+
+h1{
+    font-size: 70px;
+    background: rgba(0,0,0, .4);
+}
+
+h3 , h2 {
+    margin-left: 10%;
+    background: rgba(0,0,0, .4);
+    display: inline-block;
+    font-size: 50px;
+}
+
+.highLight {
+    color: red;
+    background: rgba(20, 41, 231, 0.486);
+}

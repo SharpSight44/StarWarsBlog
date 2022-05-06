@@ -52,7 +52,7 @@ export const AllShips = ()=>{
   <div className="card-body">
     <h5 className="card-title"><b>{x.name}</b></h5>
     <p className="card-text">A reliable and versatile astromech droid, R2-D2 has served Padmé Amidala, Anakin Skywalker, and Luke Skywalker...</p>
-    <a href={x.url} className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
+    <a href={"/ships/" + i} className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
   </div>
 </div>
 </div> )}

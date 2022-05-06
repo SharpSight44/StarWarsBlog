@@ -73,7 +73,7 @@ const save = (item) => {
   <div className="card-body">
     <h5 className="card-title"><b>{x.name} </b></h5>
     <p className="card-text">Luke Skywalker was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever...</p>
-    <a href="#" className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
+    <a href={"/characters/" + (i+1)} className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
   </div>
 </div></div> )}</div>
 

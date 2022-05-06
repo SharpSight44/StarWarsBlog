@@ -1,8 +1,13 @@
 
 
+
+
+
+
+
 export async function getAllPeople() {
 	const response = await fetch(
-		"https://www.swapi.tech/api/people"
+		"https://swapi.dev/api/people"
 	);
 	const payload = await response.json();
 
@@ -11,7 +16,7 @@ export async function getAllPeople() {
 
 export async function getAllPlanets() {
 	const response = await fetch(
-		"https://www.swapi.tech/api/planets"
+		"https://swapi.dev/api/planets"
 	);
 	const payload = await response.json();
 
@@ -20,18 +25,42 @@ export async function getAllPlanets() {
 
 export async function getAllShips() {
 	const response = await fetch(
-		"https://www.swapi.tech/api/starships"
+		"https://swapi.dev/api/starships"
 	);
 	const payload = await response.json();
 
 	return payload.results
 }
 
-export async function getShipLocal() {
+export async function getShipLocal(i) {
+	
+
 	const response = await fetch(
-		"https://www.swapi.tech/api/people/1"
+		"https://swapi.dev/api/starships/" + i
 	);
 	const payload = await response.json();
 
-	return payload.results
+	return payload
+}
+
+export async function getSinglePlanet(i) {
+	
+
+	const response = await fetch(
+		"https://swapi.dev/api/planets/" + i
+	);
+	const payload = await response.json();
+
+	return payload
+}
+
+export async function getSingleCharacter(i) {
+	
+
+	const response = await fetch(
+		"https://swapi.dev/api/people/" + i
+	);
+	const payload = await response.json();
+
+	return payload
 }

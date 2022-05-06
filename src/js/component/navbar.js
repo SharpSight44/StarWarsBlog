@@ -25,7 +25,7 @@ export const Navbar = (props) => {
 				<Link to="/planets">
 					<button className="btn btn-primary">Planets Page </button>
 				</Link>
-				<Link to="/ships">
+				<Link to="/allships">
 <button className="btn btn-danger mx-4 "> Ships Page  </button>
 				</Link>
 				<button type="button" className="btn btn-info dropdown">
