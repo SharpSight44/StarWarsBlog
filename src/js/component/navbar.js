@@ -33,7 +33,7 @@ export const Navbar = (props) => {
 						href="#"
 						role="button"
 						aria-expanded="false"></a>
-						<ul className="dropdown-menu">{favorites.map((x,i)=> <li key={i}>{x}</li>)}</ul>
+						<ul className="dropdown-menu">{favorites.map((x,i)=> <li key={i}>{favorites}</li>)}</ul>
 </button>
 
 			</div>

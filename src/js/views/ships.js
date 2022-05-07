@@ -25,14 +25,8 @@ export const AllShips = ()=>{
       }, []);
 
 
-      const favsList = (item)=>{
-        const newlist = [...favorites + item ];
-    
-        setfavorites(newlist);
-    
-        return console.log(list.map((x,i)=> <li key={i}>{x}</li>));
-    };
-    
+     
+    const listName = apiShips.name;
     
     
     const save = (item) => {
@@ -40,6 +34,13 @@ export const AllShips = ()=>{
         return setfav( current !== false ? false:true), favsList(item);
     
     };
+
+    const favsList = (item)=>{
+      const newlist = [...favorites + item ];
+  
+       return setfavorites(newlist), console.log(favorites);;
+  
+  };
 
     return(
 <>

@@ -7,7 +7,7 @@ export const Home = () => (
 	<>
 	
 	<div className="text-center pos">
-		<h1 className="home">JedI <br/> Programmer</h1>
+		<h4 className="home">JedI <br/> Programmer</h4>
 		
 	</div>
 	</>

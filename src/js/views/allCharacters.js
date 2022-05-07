@@ -15,7 +15,8 @@ export const AllCharacters = () => {
 const [fav, setfav] = useState(false);
 const [list, setlist] = useState([]);
 const [apiList, setapiList] = useState([]);
-
+const {favorites} = useContext(FavoritesContext);
+const {setfavorites} = useContext(FavoritesContext);
 
 
 
@@ -34,9 +35,9 @@ useEffect(() => {
 const favsList = (item)=>{
     const newlist = [...list + item ];
 
-    setlist(newlist);
+    
 
-    return console.log(list.map((x,i)=> <li key={i}>{x}</li>));
+    return setlist(newlist), setfavorites(newlist);
 };
 
 
@@ -59,15 +60,14 @@ const save = (item) => {
 <div className="cardsMain">
 
 <div>
-<h1> Welcome to Character Page </h1>
+<h1> Welcome to Character Page  </h1>
 </div>
 <div className="container">
 
 
 
 
-
-<div className="row titles"> Characters API</div>
+<div className="row titles"> Characters API </div>
 <div className="row holly">{apiList.map((x,i) => <div key={i} className="col"><div className="card" style={{width: "18rem"}}>
   <img src="https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_fb34a1ff.jpeg?region=131%2C0%2C951%2C536&width=768" className="card-img-top bb8" alt="..."/>
   <div className="card-body">

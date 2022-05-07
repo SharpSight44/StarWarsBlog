@@ -18,13 +18,13 @@ export const AllPlanets = ()=>{
       }, []);
 
 
-    //   const favsList = (item)=>{
-    //     const newlist = [...favlist + item ];
+      const favsList = (item)=>{
+        const newlist = [...favlist + item ];
     
-    //     setfavlist(newlist);
+        setfavlist(newlist);
     
-    //     return console.log(list.map((x,i)=> <li key={i}>{x}</li>));
-    // };
+        return console.log(list.map((x,i)=> <li key={i}>{x}</li>));
+    };
     
     
     
