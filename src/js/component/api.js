@@ -4,24 +4,46 @@
 
 
 
-
+//Updated to OWN API - PERFECT 
 export async function getAllPeople() {
 	const response = await fetch(
-		"https://swapi.dev/api/people"
-	);
-	const payload = await response.json();
+		"https://3000-sharpsight44-starwarspy-nwbn51tv9b2.ws-us45.gitpod.io/people"
+		);
+		const payload = await response.json();
+		
+		return payload
+	}
+export async function getSingleCharacter(i) {
+	const response = await fetch(
+		"https://3000-sharpsight44-starwarspy-nwbn51tv9b2.ws-us45.gitpod.io/people/" + i
+		);
+		const payload = await response.json();
+	
+		return payload.character
+	}
+	
 
-	return payload.results
-}
-
+//UPDATED to OWn API - PERFECT 
 export async function getAllPlanets() {
 	const response = await fetch(
-		"https://swapi.dev/api/planets"
+		"https://3000-sharpsight44-starwarspy-nwbn51tv9b2.ws-us45.gitpod.io/planets"
 	);
 	const payload = await response.json();
 
-	return payload.results
+	return payload
 }
+
+
+export async function getSinglePlanet(i) {
+		
+		
+	const response = await fetch(
+		"https://3000-sharpsight44-starwarspy-nwbn51tv9b2.ws-us45.gitpod.io/planets/" + i
+		);
+		const payload = await response.json();
+		
+		return payload.planet
+	}
 
 export async function getAllShips() {
 	const response = await fetch(
@@ -43,24 +65,4 @@ export async function getShipLocal(i) {
 	return payload
 }
 
-export async function getSinglePlanet(i) {
-	
 
-	const response = await fetch(
-		"https://swapi.dev/api/planets/" + i
-	);
-	const payload = await response.json();
-
-	return payload
-}
-
-export async function getSingleCharacter(i) {
-	
-
-	const response = await fetch(
-		"https://swapi.dev/api/people/" + i
-	);
-	const payload = await response.json();
-
-	return payload
-}

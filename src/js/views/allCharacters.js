@@ -69,7 +69,7 @@ const save = (item) => {
 
 <div className="row titles"> Characters API </div>
 <div className="row holly">{apiList.map((x,i) => <div key={i} className="col"><div className="card" style={{width: "18rem"}}>
-  <img src="https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_fb34a1ff.jpeg?region=131%2C0%2C951%2C536&width=768" className="card-img-top bb8" alt="..."/>
+  <img src={x.hair} className="card-img-top bb8" alt="..."/>
   <div className="card-body">
     <h5 className="card-title"><b>{x.name} </b></h5>
     <p className="card-text">Luke Skywalker was a Tatooine farmboy who rose from humble beginnings to become one of the greatest Jedi the galaxy has ever...</p>

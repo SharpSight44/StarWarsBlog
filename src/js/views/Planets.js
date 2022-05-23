@@ -44,7 +44,7 @@ export const AllPlanets = ()=>{
   <img src="https://lumiere-a.akamaihd.net/v1/images/r2-d2-main_f315b094.jpeg?region=429%2C0%2C538%2C536&width=320" className="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title"><b>{x.name}</b></h5>
-    <p className="card-text">A reliable and versatile astromech droid, R2-D2 has served Padmé Amidala, Anakin Skywalker, and Luke Skywalker...</p>
+    <p className="card-text"> Population is {x.population} <br/> Climate is {x.climate}</p>
     <a href={"/planets/" + (i + 1) } className="btn btn-success">More Info</a> <BiBookmarkHeart onClick={()=> save(x.name)} className={fav === true ? "saveIcon save" : "saveIcon"}/>
   </div>
 </div>
